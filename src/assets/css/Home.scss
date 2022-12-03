@@ -1,0 +1,269 @@
+#mainContainerHome{
+    height: 100vh;
+    background-color: #181A1B;
+    padding-top: 40px;
+    width: 90%;
+    margin-left: 5%;
+}
+html,body{
+    height: 100%;
+}
+
+#mainContainerHome{
+    display: flex;
+    justify-content: space-between;
+}
+#identity{
+    h1{
+        color: white;
+        font-size: 20px
+    }
+}
+
+#description{
+    width: 65%;
+    p{
+        color: white;
+        animation-name: appear;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        animation-delay: 2.2s;
+        font-size: 14px;
+    }
+}
+
+#role{
+    span{
+        animation-name: appear;
+        animation-timing-function: steps(1,end);
+        animation-fill-mode: forwards;
+        opacity: 0;
+        font-size: 17px;
+        color: white;
+    }
+}
+
+
+#containerButtonContact{
+    animation-name: appear;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 2.2s;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    #buttonContactMe{
+        animation-name: translateBottom;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        background-color: #000000;
+        border-radius: 10px;
+        width: 110px;
+        cursor: pointer;
+        p{
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+   
+    #buttonGithub{
+        animation-name: translateBottom;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        display: flex;
+        background-color: #262828;
+        width: 110px;
+        border-radius: 10px;
+        cursor: pointer;
+        justify-content: center;
+        border: 1px solid #FFFFFF;
+        p{
+            color: white;
+            font-size: 14px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            margin-top: 11px;
+            margin-right: 5px;
+        }
+    }
+    #buttonGithub:hover,#buttonContactMe:hover{
+        animation-name: translateTop;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+#containerImage3D{
+    img{
+        display: none;
+    }
+}
+
+
+//Animation appear role
+$numberSpan: 1;
+$i: 1;
+@while $numberSpan <= 23{
+    #role span:nth-child(#{$numberSpan}){
+        animation-delay: (0.1* $i) + s;
+    }
+    $i: $i + 1;
+    $numberSpan: $numberSpan + 1;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes translateTop{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
+@keyframes translateBottom{
+    0%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 18px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 12px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 15px;
+        }
+    }
+    #containerButtonContact{
+        width: 60%;
+        #buttonContactMe{
+            width: 90px;
+            p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 90px;
+            p{
+                font-size: 12px;
+            }
+            img{
+                width: 17px;
+                height: 17px;
+                margin-top: 11px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 16px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 10px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 12px;
+        }
+    }
+    #containerButtonContact{
+        width: 60%;
+        #buttonContactMe{
+            width: 70px;
+            p{
+                font-size: 9px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 70px;
+            p{
+                font-size: 9px;
+            }
+            img{
+                width: 15px;
+                height: 15px;
+                margin-top: 11px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px){
+    #containerButtonContact{
+        width: 60%;
+        #buttonContactMe{
+            width: 50px;
+            p{
+                font-size: 7px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 50px;
+            p{
+                font-size: 7px;
+            }
+            img{
+                width: 10px;
+                height: 10px;
+                margin-top: 7px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 700px){
+    
+}

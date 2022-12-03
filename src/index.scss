@@ -1,0 +1,121 @@
+html, body, #root{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*
+$textColor: red;
+main{
+  h1{
+    color: $textColor;
+  }
+}
+
+main{
+  div{
+    p{
+      color: $textColor;
+    }
+  }
+}
+
+$coulours: {
+  mint: #15DEA5,
+  navy: #001534,
+  white: #FFFFFF,
+  seafoam: #D6FFF5,
+  rust: #DB464B
+};
+
+@each $colour, $hex in $coulours{
+  .btn--#15DEA5{$colour}{
+    background-color: $hex;
+  }
+}
+
+@if (lightness(#15DEA5) > 25%){
+  .btn--#15DEA5{
+    color: black;
+  }
+} @else {
+  .btn--#15DEA5{
+    color: white;
+  }
+}
+
+
+.btn {
+    display: inline-block;
+    margin: 0 auto;
+    background: #15DEA5;
+    padding: 1rem;
+    &--disabled {
+        background: grey;
+    }
+  
+     &--outline {
+        background: transparent;
+        border: 2px solid #15DEA5;
+        &.btn--disabled{
+  
+           border: 2px solid grey;
+        }
+    }
+  }
+}
+@mixin mixin-name {
+  css-property: value;
+}
+
+
+.form {
+  &__heading {
+    @include heading-shadow;
+  }
+}
+
+  
+
+@mixin heading-shadow($colour: $colour-primary){
+  text-shadow: .55rem .55rem $colour;
+}
+.heading{
+  &__header {
+    @include heading-shadow($colour-white);
+  }
+}
+
+
+.typography {
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+  }
+  h1 {
+  @extend .typography;
+  }
+
+  %typography {
+      color: $colour-primary;
+      font-size: 2rem;
+      font-weight: 100;
+      line-height: 1.7;
+    }
+    h1 {
+    @extend %typography;
+    }
+    textarea {
+      @extend %typography;
+    }
+    button {
+      @extend %typography;
+    }
+    input {
+      @extend %typography;
+    }
+  */
+
+    
