@@ -25,47 +25,63 @@ function NavBar() {
 
   return (
     <div id="mainContainerNav">
-      <div id="ContainerDownloadCv">
-        <span className="roboto">Méric</span><span className="roboto">Chenu</span>
-      </div>
-      <div id="menu">
-        <div id="navigationPhone">
-          <button id="buttonHamburger" onClick={showMenuHamburger} >
-              <div>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </button>
-            <div id="menuHamburger" className="hiddenMenuHamburger">
-              <button id="buttonClose" onClick={hideMenuHamburger}>
+      <div id="containerNav">
+        <div id="ContainerDownloadCv">
+          <span className="lato">Méric</span><span className="lato">Chenu</span>
+        </div>
+        <div id="menu">
+          <div id="navigationPhone">
+            <button id="buttonHamburger" onClick={showMenuHamburger} >
                 <div>
+                  <span></span>
                   <span></span>
                   <span></span>
                 </div>
               </button>
-              <div id="linkMenuHamburger">
-                <p className="roboto">Accueil</p>
-                <p className="roboto">A propos</p>
-                <p className="roboto">Portfolio</p>
-                <p className="roboto">Compétences</p>
-                <p className="roboto">Formation</p>
-                <p className="roboto">Contact</p>
+              <div id="menuHamburger" className="hiddenMenuHamburger">
+                <button id="buttonClose" onClick={hideMenuHamburger}>
+                  <div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <div id="linkMenuHamburger">
+                  <p className="lato">Accueil</p>
+                  <p className="lato">A propos</p>
+                  <p className="lato">Portfolio</p>
+                  <p className="lato">Compétences</p>
+                  <p className="lato">Formation</p>
+                  <p className="lato">Contact</p>
+                </div>
               </div>
             </div>
           </div>
+          <div id="menuComputer">
+            <img src={require("../assets/images/home_icon.png")} alt="home icon" />
+            <p className="lato">Accueil</p>
+            <p className="lato">A propos</p>
+            <p className="lato">Portfolio</p>
+            <p className="lato">Compétences</p>
+            <p className="lato">Formation</p>
+            <p className="lato">Contact</p>
+          </div>
         </div>
-        <div id="menuComputer">
-          <img src={require("../assets/images/home_icon.png")} alt="home icon" />
-          <p className="roboto">Accueil</p>
-          <p className="roboto">A propos</p>
-          <p className="roboto">Portfolio</p>
-          <p className="roboto">Compétences</p>
-          <p className="roboto">Formation</p>
-          <p className="roboto">Contact</p>
+        <div id="containerContactSocialMedia">
+          <div id="containerEmail">
+            <a href="mailto:meric.chenu@efrei.net?subject=Appel d'offre freelance">
+              <p>Email : <span>meric.chenu@efrei.net</span></p>
+            </a>
+          </div>
+          <div id="containerSocialMedia">
+            <a href="https://www.linkedin.com/in/m%C3%A9ric-chenu" target="_blank" rel="noopener noreferrer">
+              <img src={require("../assets/images/logo_linkedin.png")} alt="linkedin icon" />
+            </a>
+            <a href="https://github.com/meric-chenu" target="_blank" rel="noopener noreferrer">
+              <img src={require("../assets/images/logo_github.png")} alt="github icon" />
+            </a>
+          </div>
         </div>
       </div>
-          
   );
 }
 

@@ -1,4 +1,4 @@
-#mainContainerNav{
+#containerNav{
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -77,6 +77,40 @@
         }
     }
 }
+#containerContactSocialMedia{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    position: fixed;
+    bottom: 0;
+    #containerEmail{
+        padding-top: 30px;
+        a{
+            text-decoration: none;
+            p{
+                color: white;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    #containerSocialMedia{
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+            img:nth-child(1){
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
 
 .hideButtonHamburger, .hiddenMenuHamburger{
     display: none;
@@ -209,6 +243,5 @@
     }
     #ContainerDownloadCv span{
         font-size: 12px;
-    }
-    
+    }   
 }

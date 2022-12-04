@@ -1,18 +1,16 @@
 #mainContainerHome{
     height: 100vh;
     background-color: #181A1B;
-    padding-top: 40px;
-    width: 90%;
-    margin-left: 5%;
-}
-html,body{
-    height: 100%;
-}
-
-#mainContainerHome{
+    padding-top: 60px;
+    width: 100%;
+    padding-left: 5%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
 }
+
+
+
 #identity{
     h1{
         color: white;
@@ -79,22 +77,26 @@ html,body{
         animation-timing-function: ease-in-out;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
-        display: flex;
         background-color: #262828;
         width: 110px;
         border-radius: 10px;
         cursor: pointer;
         justify-content: center;
         border: 1px solid #FFFFFF;
-        p{
-            color: white;
-            font-size: 14px;
-        }
-        img{
-            width: 20px;
-            height: 20px;
-            margin-top: 11px;
-            margin-right: 5px;
+        a{
+            justify-content: center;
+            display: flex;
+            text-decoration: none;
+            p{
+                color: white;
+                font-size: 14px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                margin-top: 11px;
+                margin-right: 5px;
+            }
         }
     }
     #buttonGithub:hover,#buttonContactMe:hover{
@@ -109,7 +111,116 @@ html,body{
         display: none;
     }
 }
+#mainContainerSecondPart{
+    background-color: #050505;
+    width: 100%;
+    margin-top: -20px
+}
+#containerAbout{
+    padding-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    h2{
+        color: white;
+    }
+    #containerPictureDescription{
+        width: 100%;
+        display: flex;
+        #elipse{
+            display: none;
+        }
+        #profilPicture{
+            width: 50%;
+            div{
+                border: 5px solid white;
+                width: 180px;
+                text-align: center;
+                img{
+                    width: 150px;
+                    height: 201px;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+        #containerDescriptionAbout{
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            #description{
+                width: 100%;
+                p{
+                    font-size: 15px;
+                    color: #ABA9A2;
+                }
+            }
+            #containerLocation{
+                z-index: 2;
+                span{
+                    color: #624C20;
+                }
+                p{
+                    color: white;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                
+            }
+            #containerDownloadCV{
+                cursor: pointer;
+                z-index: 2;
+                width: 200px;
+                text-align: center;
+                border: 2px solid #624C20;
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            
+            
+        }
+    }
+}
+#containerServices{
+    margin-left: 50px;
+    margin-top: 50px;
+    h2{
+        color: white;
+        font-size: 20px;
+    }
+    #displayServices{
+        display: flex;
+        flex-direction: column;
+        #webdevelopmemt,#webSiteMaintenance{
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            p{
+                color: white;
+                font-size: 14px;
+            }
+            p:nth-child(2){
+                font-weight: bold;
+            }
+            p:nth-child(3){
+                text-align: justify;
+                color: #9D9891;
+            }
+            
 
+            img{
+                width: 100px;
+                height: 100px;
+                margin: auto;
+            }
+        }
+    }
+}
 
 //Animation appear role
 $numberSpan: 1;
@@ -148,51 +259,59 @@ $i: 1;
 }
 
 
+
 @media screen and (max-width: 500px){
-    #identity{
-        h1{
-            color: white;
-            font-size: 18px
+    #containerAbout{
+        h2{
+            font-size: 18px;
         }
-    }
-    
-    #description{
-        width: 65%;
-        p{
-            font-size: 12px;
-        }
-    }
-    
-    #role{
-        span{
-            font-size: 15px;
-        }
-    }
-    #containerButtonContact{
-        width: 60%;
-        #buttonContactMe{
-            width: 90px;
-            p{
-                font-size: 12px;
-                text-align: center;
+        #containerPictureDescription{
+            
+            #profilPicture{
+                width: 30%;
+                margin-top: 30px;
+                div{
+                    border: 5px solid white;
+                    width: 100px;
+                    text-align: center;
+                    img{
+                        width: 100px;
+                        height: 134px;
+                        padding-bottom: 20px;
+                    }
+                }
             }
-        }
-       
-        #buttonGithub{
-            width: 90px;
-            p{
-                font-size: 12px;
-            }
-            img{
-                width: 17px;
-                height: 17px;
-                margin-top: 11px;
-                margin-right: 5px;
+            #containerDescriptionAbout{
+                margin-left: 50px;
+                #description{
+                    p{
+                        font-size: 10px;
+                    }
+                }
+                #containerLocation{
+                    span{
+                        color: #624C20;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 90px;
+                    text-align: center;
+                    border: 2px solid #624C20;
+                    border-radius: 10px;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 9px;
+                    }
+                }
+                
             }
         }
     }
 }
-
 @media screen and (max-width: 400px){
     #identity{
         h1{
@@ -225,19 +344,25 @@ $i: 1;
        
         #buttonGithub{
             width: 70px;
-            p{
-                font-size: 9px;
-            }
-            img{
-                width: 15px;
-                height: 15px;
-                margin-top: 11px;
-                margin-right: 5px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 9px;
+                }
+                img{
+                    width: 15px;
+                    height: 15px;
+                    margin-top: 11px;
+                    margin-right: 5px;
+                }
             }
         }
     }
+    
+    
 }
 @media screen and (max-width: 300px){
+    
     #containerButtonContact{
         width: 60%;
         #buttonContactMe{
@@ -250,20 +375,743 @@ $i: 1;
        
         #buttonGithub{
             width: 50px;
-            p{
-                font-size: 7px;
-            }
-            img{
-                width: 10px;
-                height: 10px;
-                margin-top: 7px;
-                margin-right: 5px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 7px;
+                }
+                img{
+                    width: 10px;
+                    height: 10px;
+                    margin-top: 7px;
+                    margin-right: 5px;
+                }
             }
         }
     }
 }
 
-
-@media screen and (min-width: 700px){
+@media screen and(min-width:400px){
+    #displayServices{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media screen and (min-width: 500px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 18px
+        }
+    }
     
+    #description{
+        width: 65%;
+        p{
+            font-size: 12px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 15px;
+        }
+    }
+    #containerButtonContact{
+        width: 60%;
+        #buttonContactMe{
+            width: 90px;
+            p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 90px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 12px;
+                }
+                img{
+                    width: 17px;
+                    height: 17px;
+                    margin-top: 11px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerAbout{
+        h2{
+            font-size: 22px;
+        }
+        #containerPictureDescription{
+            
+            #profilPicture{
+                width: 50%;
+                margin-top: 20px;
+                div{
+                    border: 5px solid white;
+                    width: 170px;
+                    text-align: center;
+                    img{
+                        width: 150px;
+                        height: 201px;
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                margin-left: 30px;
+                #description{
+                    p{
+                        text-align: justify;
+                        font-size: 12px;
+                    }
+                }
+                #containerLocation{
+                    span{
+                        color: #624C20;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 120px;
+                    text-align: center;
+                    border: 2px solid #624C20;
+                    border-radius: 10px;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 12px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 22px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 14px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 18px;
+        }
+    }
+    #containerButtonContact{
+        width: 75%;
+        #buttonContactMe{
+            width: 110px;
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 110px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 14px;
+                }
+                img{
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 11px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerDescription{
+        width: 70%;
+    }
+    #containerImage3D{
+        width: 30%;
+        padding-right: 20px;
+        img{
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+        
+    }
+    #containerAbout{
+        h2{
+            font-size: 22px;
+        }
+        #containerPictureDescription{
+            
+            #profilPicture{
+                width: 50%;
+                margin-top: 20px;
+                div{
+                    border: 5px solid white;
+                    width: 170px;
+                    text-align: center;
+                    img{
+                        width: 150px;
+                        height: 201px;
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                margin-left: 30px;
+                #description{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                #containerLocation{
+                    span{
+                        color: #624C20;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 120px;
+                    text-align: center;
+                    border: 2px solid #624C20;
+                    border-radius: 10px;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 12px;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    #containerServices{
+        h2{
+            font-size: 25px;
+        }
+        #displayServices{
+            #webdevelopmemt,#webSiteMaintenance{
+                width: 90%;
+                margin-left: 5%;
+                display: flex;
+                flex-direction: column;
+                p{
+                    font-size: 18px;
+                }
+                
+                img{
+                    width: 110px;
+                    height: 110px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    
+
+}
+@media screen and (min-width: 700px){
+    #containerAbout{
+        h2{
+            font-size: 25px;
+        }
+        #containerPictureDescription{
+            
+            #profilPicture{
+                width: 50%;
+                margin-top: 20px;
+                div{
+                    border: 5px solid white;
+                    width: 170px;
+                    text-align: center;
+                    img{
+                        width: 150px;
+                        height: 201px;
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                margin-left: 30px;
+                #description{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                #containerLocation{
+                    span{
+                        color: #624C20;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 150px;
+                    text-align: center;
+                    border: 2px solid #624C20;
+                    border-radius: 10px;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 15px;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+@media screen and (min-width: 800px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 28px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 20px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 24px;
+        }
+    }
+    #containerButtonContact{
+        width: 60%;
+        #buttonContactMe{
+            width: 130px;
+            p{
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 130px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 18px;
+                }
+                img{
+                    width: 22px;
+                    height: 22px;
+                    margin-top: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerDescription{
+        width: 70%;
+    }
+    #containerImage3D{
+        width: 30%;
+        padding-right: 20px;
+        margin-top: 30px;
+        img{
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+        
+    }
+    #containerAbout{
+        h2{
+            font-size: 28px;
+        }
+        #containerPictureDescription{
+            #profilPicture{
+                width: 33%;
+                margin-top: 20px;
+                div{
+                    border: 5px solid white;
+                    width: 170px;
+                    text-align: center;
+                    img{
+                        width: 150px;
+                        height: 201px;
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                width: 50%;
+                margin-left: -10px;
+            }
+            #elipse{
+                display: block;
+                img{
+                    width: 200px;
+                    height: 115px;
+                    margin-top: 50px;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    #containerServices{
+        h2{
+            font-size: 30px;
+        }
+        #displayServices{
+            width: 80%;
+            margin-left: 10%;
+            flex-direction: row;
+            justify-content: space-between;
+            #webdevelopmemt,#webSiteMaintenance{
+                width: 40%; 
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1000px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 30px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 22px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 26px;
+        }
+    }
+    #containerButtonContact{
+        width: 65%;
+        #buttonContactMe{
+            width: 140px;
+            p{
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 140px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 20px;
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 17px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerDescription{
+        width: 70%;
+    }
+    #containerImage3D{
+        width: 30%;
+        padding-right: 20px;
+        margin-top: 30px;
+        img{
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+        
+    }
+    #containerAbout{
+        h2{
+            font-size: 30px;
+        }
+        #containerPictureDescription{
+            #elipse{
+                img{
+                    width: 250px;
+                    height: 144px;
+                    margin-left: 40px;
+                }
+            }
+            #profilPicture{
+                div{
+                    border: 5px solid white;
+                    width: 210px;
+                    text-align: center;
+                    img{
+                        width: 200px;
+                        height: 268px;
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                margin-left: 30px;
+                #description{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+                #containerLocation{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 180px;
+                    a{
+                        font-size: 18px;
+                    }
+                }   
+                
+            }
+            
+        }
+        
+    }
+    #containerServices{
+        h2{
+            font-size: 32px;
+        }
+        #displayServices{
+            width: 70%;
+            margin-left: 15%;
+            
+            #webdevelopmemt,#webSiteMaintenance{
+                width: 40%;
+                p{
+                    font-size: 18px;
+                }
+                
+                img{
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1100px){
+    #identity{
+        h1{
+            color: white;
+            font-size: 35px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 26px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 30px;
+        }
+    }
+    #containerButtonContact{
+        width: 65%;
+        #buttonContactMe{
+            width: 160px;
+            p{
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 160px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 22px;
+                }
+                img{
+                    width: 27px;
+                    height: 27px;
+                    margin-top: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerDescription{
+        width: 70%;
+    }
+    #containerImage3D{
+        width: 30%;
+        padding-right: 30px;
+        margin-top: 30px;
+        img{
+            display: block;
+            width: 300px;
+            height: 300px;
+        }
+        
+    }
+    #containerAbout{
+        h2{
+            font-size: 35px;
+        }
+        #containerPictureDescription{
+            #elipse{
+                img{
+                    width: 270px;
+                    height: 155px;
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+@media screen and (min-width: 1200px){
+    #identity{
+        h1{
+            font-size: 40px
+        }
+    }
+    
+    #description{
+        width: 65%;
+        p{
+            font-size: 30px;
+        }
+    }
+    
+    #role{
+        span{
+            font-size: 35px;
+        }
+    }
+    #containerButtonContact{
+        width: 65%;
+        #buttonContactMe{
+            width: 180px;
+            p{
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+       
+        #buttonGithub{
+            width: 180px;
+            a{
+                justify-content: center;
+                p{
+                    font-size: 25px;
+                }
+                img{
+                    width: 30px;
+                    height: 30px;
+                    margin-top: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    #containerImage3D{
+        width: 30%;
+        padding-right: 40px;
+        margin-top: 50px;
+        img{
+            display: block;
+            width: 350px;
+            height: 350px;
+        }
+        
+    }
+    #containerAbout{
+        h2{
+            font-size: 40px;
+        }
+        #containerPictureDescription{
+            #elipse{
+                margin-top: 50px;
+                img{
+                    width: 270px;
+                    height: 155px;
+                    margin-left: 40px;
+                }
+            }
+            #profilPicture{
+                div{
+                    border: 5px solid white;
+                    width: 210px;
+                    text-align: center;
+                    img{
+                        width: 220px;
+                        height: 294.8px;
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+            #containerDescriptionAbout{
+                margin-left: -80px;
+                #description{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                #containerLocation{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                #containerDownloadCV{
+                    width: 200px;
+                    a{
+                        font-size: 20px;
+                    }
+                }   
+            }
+            
+        }
+        
+    }
+
 }
