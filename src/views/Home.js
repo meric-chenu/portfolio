@@ -1,7 +1,52 @@
 import React from "react";
 import "../assets/css/Home.scss";
 import Pdf from "../pdfFolder/Meric_CHENU_CV.pdf";
+import ErodeDashboard from "../assets/images/erode_dashboard.png";
+import ErodeRegister from "../assets/images/erode_register.png";
+import LogoErode from "../assets/images/logo_erode.png";
+import LogoFap from "../assets/images/logo_fap.png";
+import FapHome from "../assets/images/fap_home.png";
+import FapContact from "../assets/images/fap_contact.png";
+import LogoToDoList from "../assets/images/logo_todolist.png";
+import ToDoListLogin from "../assets/images/todolistLogin.png";
+import ToDoListDashboard from "../assets/images/dashboard_todolist.png";
+
+import LogoNode from "../assets/images/logo_nodejs.png";
+import LogoReact from "../assets/images/logo_react.png";
+import LogoTailwind from "../assets/images/logo_tailwind.png";
+import LogoFigma from "../assets/images/logo_figma.png";
+import LogoVue from "../assets/images/vuejs_logo.png";
+
+
 function Home(){
+    const BigProjects = [{
+        "title": LogoErode,
+        "firstExample": ErodeRegister,
+        "secondExample": ErodeDashboard,
+        "date": "2022",
+        "subtitle": "Erode",
+        "description": "Une messagerie chiffrée de bout en bout",
+        "frontBack": ["Back-End"],
+        "techno": [LogoNode]
+    },{
+        "title": LogoFap,
+        "firstExample": FapHome,
+        "secondExample": FapContact,
+        "date": "2022",
+        "subtitle": "Fapefrei",
+        "description": "site vitrine d'une association d'aide aux particuliers",
+        "frontBack": ["Front-End"],
+        "techno": [LogoReact,LogoTailwind,LogoFigma]
+    },{
+        "title": LogoToDoList,
+        "firstExample": ToDoListLogin,
+        "secondExample": ToDoListDashboard,
+        "date": "2022",
+        "subtitle": "ToDoList",
+        "description": "site de gestion des tâches à réaliser",
+        "frontBack": ["Front-End","Back-End"],
+        "techno": [LogoVue,LogoNode]
+    }]
     return(
         <div id="mainContainer">
             <div id="mainContainerHome">
@@ -101,6 +146,43 @@ function Home(){
                         </div>
                     </div>
                 </div>
+                <div id="containerBigProjects">
+                    <h2 className="lato">Sélection de gros projets</h2>
+                    <div id="displayBigProducts">
+                        {BigProjects.map((bigProject, index) => (
+                            <div className="bigProduct">
+                                <div className="containerDisplayExample">
+                                    <img src={bigProject.title}/>
+                                    <img src={bigProject.secondExample}/>
+                                    <img src={bigProject.firstExample}/>
+                                    
+                                </div>
+                                <div className="descriptionProject">
+                                    <p className="lato">{bigProject.date}</p>
+                                    <p className="lato">{bigProject.subtitle}</p>
+                                    <p className="lato">{bigProject.description}</p>
+                                </div>
+                                <div className="containerFrontBack">
+                                    {bigProject.frontBack.map((frontBack) => (
+                                        <div className="FrontBack">
+                                            <p className="lato">{frontBack}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div id="containerTechno">
+                                    {bigProject.techno.map((techno) => (
+                                        <div className="techno">
+                                            <img src={techno}/>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div>
     )
