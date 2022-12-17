@@ -27,7 +27,8 @@ function Home(){
         "subtitle": "Erode",
         "description": "Une messagerie chiffrée de bout en bout",
         "frontBack": ["Back-End"],
-        "techno": [LogoNode]
+        "techno": [LogoNode],
+        "nameTechno": ["node"]
     },{
         "title": LogoFap,
         "firstExample": FapHome,
@@ -36,7 +37,9 @@ function Home(){
         "subtitle": "Fapefrei",
         "description": "site vitrine d'une association d'aide aux particuliers",
         "frontBack": ["Front-End"],
-        "techno": [LogoReact,LogoTailwind,LogoFigma]
+        "techno": [LogoReact,LogoTailwind,LogoFigma],
+        "nameTechno": ["react","tailwind","figma"]
+
     },{
         "title": LogoToDoList,
         "firstExample": ToDoListLogin,
@@ -45,7 +48,9 @@ function Home(){
         "subtitle": "ToDoList",
         "description": "site de gestion des tâches à réaliser",
         "frontBack": ["Front-End","Back-End"],
-        "techno": [LogoVue,LogoNode]
+        "techno": [LogoVue,LogoNode],
+        "nameTechno": ["vue","node"]
+
     }]
     return(
         <div id="mainContainer">
@@ -162,27 +167,29 @@ function Home(){
                                     <p className="lato">{bigProject.subtitle}</p>
                                     <p className="lato">{bigProject.description}</p>
                                 </div>
-                                <div className="containerFrontBack">
-                                    {bigProject.frontBack.map((frontBack) => (
-                                        <div className="FrontBack">
-                                            <p className="lato">{frontBack}</p>
-                                        </div>
-                                    ))}
+                                <div className="containerFrontBackStudy">
+                                    <div className="containerReadStudy">
+                                        <img src={require("../assets/images/book.png")} alt="logo book"/>
+                                        <p className="lato">Lire l'étude</p>
+                                    </div>
+                                    <div className="containerFrontBack">
+                                        {bigProject.frontBack.map((frontBack) => (
+                                            <div className="FrontBack">
+                                                <p className="lato">{frontBack}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div id="containerTechno">
-                                    {bigProject.techno.map((techno) => (
-                                        <div className="techno">
-                                            <img src={techno}/>
-                                        </div>
+                                <div className="containerTechno">
+                                    {bigProject.techno.map((techno,index) => (
+                                        <img src={techno} className={bigProject.nameTechno[index]}/>
                                     ))}
                                 </div>
                             </div>
-                            
-
+                                
                         ))}
                     </div>
                 </div>
-
             </div>
         </div>
     )
