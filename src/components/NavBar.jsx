@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as LinkRouter } from "react-router-dom" ;
+import {Link, animateScroll as scroll } from "react-scroll";
 import "../assets/css/NavBar.scss";
 
 function NavBar() {
@@ -58,12 +59,12 @@ function NavBar() {
           </div>
           <div id="menuComputer">
             <img src={require("../assets/images/home_icon.png")} alt="home icon" />
-            <p className="lato">Accueil</p>
-            <p className="lato">A propos</p>
-            <p className="lato">Portfolio</p>
-            <p className="lato">Compétences</p>
-            <p className="lato">Formation</p>
-            <p className="lato">Contact</p>
+            <Link className="lato" activeClass="active" smooth spy to="mainContainerHome">Accueil</Link>
+            <Link className="lato" activeClass="active" smooth spy to="containerAbout">A propos</Link>
+            <Link className="lato" activeClass="active" smooth spy to="containerServices">Portfolio</Link>
+            <Link className="lato" activeClass="active" smooth spy to="containerSkills">Compétences</Link>
+            <Link className="lato" activeClass="active" smooth spy to="containerFormationExperiences">Formation</Link>
+            <Link className="lato" activeClass="active" smooth spy to="containerContact">Contact</Link>
           </div>
         </div>
         <div id="containerContactSocialMedia">

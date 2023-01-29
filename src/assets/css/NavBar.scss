@@ -14,10 +14,14 @@
         width: 20px;
         height: 20px;
         margin-top: 4px;
+        cursor: pointer;
     }
-    p{
+    a{
+        transform: translateY(10px);
+        text-decoration: none;
         color: #7D7D7C;
         font-size: 10px;
+        cursor: pointer;
     }
 }
 #menu{
@@ -88,7 +92,7 @@
         padding-top: 30px;
         a{
             text-decoration: none;
-            font-size: 8px;
+            font-size: 10px;
             p{
                 color: white;
                 span{
@@ -101,6 +105,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 5px;
+        transform: translateY(-5px);
         a{
             text-decoration: none;
             img{
@@ -173,14 +178,14 @@
     #containerContactSocialMedia{
         #containerEmail{
             a{
-                font-size: 10px;
+                font-size: 12px;
             }
         }
         #containerSocialMedia{
             a{
                 img{
-                    width: 22px;
-                    height: 22px;
+                    width: 25px;
+                    height: 25px;
                 }
             }
         }
@@ -195,7 +200,7 @@
         display: none;
     }
     #menuComputer{
-        p{
+        a{
             font-size: 9px;
         }
         img{
@@ -206,36 +211,6 @@
     }
     #ContainerDownloadCv span{
         font-size: 12px;
-    }
-    #containerContactSocialMedia{
-        #containerEmail{
-            a{
-                font-size: 12px;
-            }
-        }
-        #containerSocialMedia{
-            a{
-                img{
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-        }
-    }
-}
-@media screen and (min-width: 800px){
-    #menuComputer{
-        p{
-            font-size: 12px;
-        }
-        img{
-            margin-top: 3px;
-            width: 25px;
-            height: 25px;
-        } 
-    }
-    #ContainerDownloadCv span{
-        font-size: 14px;
     }
     #containerContactSocialMedia{
         #containerEmail{
@@ -253,10 +228,41 @@
         }
     }
 }
+@media screen and (min-width: 800px){
+    #menuComputer{
+        a{
+            font-size: 12px;
+        }
+        img{
+            margin-top: 3px;
+            width: 25px;
+            height: 25px;
+        } 
+    }
+    #ContainerDownloadCv span{
+        font-size: 14px;
+    }
+    #containerContactSocialMedia{
+        #containerEmail{
+            transform: translateY(10px);
+            a{
+                font-size: 16px;
+            }
+        }
+        #containerSocialMedia{
+            a{
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1000px){
     #menuComputer{
-        p{
+        a{
             font-size: 14px;
         }
         img{
@@ -268,11 +274,26 @@
     #ContainerDownloadCv span{
         font-size: 16px;
     }
+    #containerContactSocialMedia{
+        #containerEmail{
+            a{
+                font-size: 18px;
+            }
+        }
+        #containerSocialMedia{
+            a{
+                img{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1250px){
     #menuComputer{
-        p{
+        a{
             font-size: 16px;
         }
         img{
@@ -283,6 +304,41 @@
     }
     #ContainerDownloadCv span{
         font-size: 18px;
+    }
+}
+@media screen and (min-width: 1500px){
+    #containerContactSocialMedia{
+        #containerEmail{
+            a{
+                font-size: 20px;
+            }
+        }
+        #containerSocialMedia{
+            a{
+                img{
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1800px){
+    #containerContactSocialMedia{
+        #containerEmail{
+            a{
+                font-size: 22px;
+            }
+        }
+        #containerSocialMedia{
+            a{
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
     }
 }
 
