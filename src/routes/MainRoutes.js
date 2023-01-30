@@ -1,5 +1,6 @@
 import Home from "../views/Home.js"
 import Missing from "../views/Missing.js"
+import StudyCase from "../views/StudyCase.js"
 const MainRoutes = {
     path:"",
     children: [
@@ -10,6 +11,10 @@ const MainRoutes = {
         {
             path: "*",
             element: <Missing/>
+        },
+        {
+            path: "studyCase",
+            element: <StudyCase/>
         }
     ]
 }

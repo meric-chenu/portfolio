@@ -18,7 +18,7 @@ import LogoTailwind from "../assets/images/logo_tailwind.png";
 import LogoFigma from "../assets/images/logo_figma.png";
 import LogoVue from "../assets/images/vuejs_logo.png";
 
-
+import { Link as LinkRouter,useLocation } from "react-router-dom" ;
 import {Link, animateScroll as scroll } from "react-scroll";
 
 function Home(){
@@ -99,7 +99,36 @@ function Home(){
         "class": "microsoft_logo"
     }
 ]
-    
+    const studyCase = [{
+        "title": "Erode",
+        "description": "Une messagerie chiffrée de bout en bout",
+        "published": null,
+        "presentation": "Au cours d’un projet scolaire, nous devions chercher une solution mêlant chiffrement de bout-en-bout et développement. Après mure réflexion, nous nous sommes penchés sur le développement d’une application de messagerie web. Suite à une étude de marché, nous en sommes arrivés à la conclusion que peu de messagerie à destruction de message après sa lecture existait, mis à part whatsapp avec sa fonctionnalité de message éphémère. ",
+        "resolution": "L’envoi de messages critiques, à l’instar de ceux transférant son numéro de carte bancaire, nécessite une pleine confiance concernant son interlocuteur et l’outil servant de transfert. Nombre sont les problèmes pouvant intervenir : Impression écran de la part de l’interlocuteur, mauvaise gestion des données dans la base de données, problème d’intégrité, de confidentialité",
+        "solution": "Afin de résoudre la majorité de ces problèmes, nous avons développé notre propre messagerie, comprenant notre propre algorithme de chiffrement (appliqué sous une couche de RSA)"
+    },
+    {
+        "title": "site fap efrei",
+        "description": "Refonte de site web d'association",
+        "published": null,
+        "presentation": "Fap efrei est une association de formation aux particuliers sur des sujets informatiques tels que l’initiation à la programmation pour les plus jeunes, aider des séniors à effectuer leur démarche administrative sur le net, aider à la réinsertion professionnelle en dispensant des cours sur la création de CV, l’élaboration d’une lettre de motivation mais aussi les aider dans leurs démarches administratives, et enfin accompagner des personnes atteintes de légers handicaps afin qu’elle puisse être à l’aise avec l’utilisation d’internet. En tant que responsable technique, j’ai dû veiller à la refonte du site internet (design + développement) passant d’une version no-code, en une version développée en reactjs.",
+        "resolution": "Au sein de l’association, nous avons relevé une difficulté chez nos collaborateurs lorsqu’une modification devait se faire sur le site web. En effet, celui-ci ayant été hébergé sur wordpress, très peu de collaborateurs étaient formés sur celui-ci. ",
+        "solution": "De ce fait, il m’a été nécessaire de refaire le design (afin de rendre le site plus jeune), puis de passer de wordpress à reactjs."
+    }
+]
+    const location = useLocation();
+    useEffect(() => {
+        console.log("location hash : ",location.hash)
+        if(location.hash){
+            let elem = document.getElementById(location.hash.slice(1));
+            if(elem){
+                elem.scrollIntoView({behavior: "smooth"});
+            }
+        }
+        else{
+            window.scrollTo({top: 0,left:0,behavior: "smooth"});
+        }
+    },[location,])
     const handleAddCounter = async e => {
         clearInterval(autoCaroussel);
         let counter =  counterCaroussel[0].id - 1;
@@ -268,7 +297,7 @@ function Home(){
                                 <div className="containerFrontBackStudy">
                                     <div className="containerReadStudy">
                                         <img src={require("../assets/images/book.png")} alt="logo book"/>
-                                        <p className="lato">Lire l'étude</p>
+                                        <LinkRouter className="lato" to="/studyCase" state={{ project: studyCase[index]}}>Lire l'étude</LinkRouter>
                                     </div>
                                     <div className="containerFrontBack">
                                         {bigProject.frontBack.map((frontBack) => (
